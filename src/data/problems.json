@@ -1,0 +1,432 @@
+[
+  {
+    "name": "Loop-Pattern",
+    "icon": "📚",
+    "description": "Master Loops Patterns",
+    "problems": [
+      {
+        "id": 1,
+        "title": "Square Pattern",
+        "description": "Prints a square pattern of stars for a given size. The size is input by the user.\n\nExample:\nFor input `5`, the output will be:\n\n*****\n*****\n*****\n*****\n*****\n",
+        "difficulty": "Easy",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num;\n    cin >> num;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < num; j++)\n        {\n            cout << \"*\";\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+      {
+        "id": 2,
+        "title": "Rectangle Pattern",
+        "description": "Prints a rectangle pattern of stars with given rows and columns. Both dimensions are input by the user.\n\nExample:\nFor input `3 5`, the output will be:\n\n*****\n*****\n*****\n",
+        "difficulty": "Easy",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int rows, cols;\n    cin >> rows >> cols;\n    for (int i = 0; i < rows; i++)\n    {\n        for (int j = 0; j < cols; j++)\n        {\n            cout << \"*\";\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(rows * cols)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+
+      {
+        "id": 4,
+        "title": "Hollow Rectangle Pattern",
+        "description": "Prints a hollow rectangle pattern of stars with given rows and columns. Both dimensions are input by the user.\n\nExample:\nFor input `4 5`, the output will be:\n\n*****\n*   *\n*   *\n*****\n",
+        "difficulty": "Easy",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int row;\n    int col;\n    cin >> row;\n    cin >> col;\n    for (int i = 0; i < row; i++)\n    {\n        for (int j = 0; j < col; j++)\n        {\n            if (i == 0 || i == row - 1)\n            {\n                cout << \"*\";\n            }\n            else\n            {\n                if (j == 0 || j == col - 1)\n                {\n                    cout << \"*\";\n                }\n                else\n                {\n                    cout << \" \";\n                }\n            }\n        }\n        cout << endl;\n    }\n\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n * m)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+      {
+        "id": 5,
+        "title": "Half Pyramid Pattern",
+        "description": "Prints a half pyramid pattern of stars for a given size. The size is input by the user.\n\nExample:\nFor input `5`, the output will be:\n\n*\n**\n***\n****\n*****\n",
+        "difficulty": "Easy",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num;\n    cin >> num;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < i + 1; j++)\n        {\n            cout << \"*\";\n        }\n        cout << endl;\n    }\n\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+      {
+        "id": 6,
+        "title": "Inverted Half Pyramid Pattern",
+        "description": "Prints an inverted half pyramid pattern of stars for a given size. The size is input by the user.\n\nExample:\nFor input `5`, the output will be:\n\n*****\n****\n***\n**\n*\n",
+        "difficulty": "Easy",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num;\n    cin >> num;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < num - i; j++)\n        {\n            cout << \"*\";\n        }\n        cout << endl;\n    }\n\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+      {
+        "id": 7,
+        "title": "Numeric Half Pyramid Pattern",
+        "description": "Prints a numeric half pyramid pattern for a given size. The size is input by the user.\n\nExample:\nFor input `5`, the output will be:\n\n1\n12\n123\n1234\n12345\n",
+        "difficulty": "Easy",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num;\n    cin >> num;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < i + 1; j++)\n        {\n            cout << j + 1;\n        }\n        cout << endl;\n    }\n\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+      {
+        "id": 8,
+        "title": "Inverted Numeric Half Pyramid Pattern",
+        "description": "Prints an inverted numeric half pyramid pattern for a given size. The size is input by the user.\n\nExample:\nFor input `5`, the output will be:\n\n12345\n1234\n123\n12\n1\n",
+        "difficulty": "Easy",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num;\n    cin >> num;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < num - i; j++)\n        {\n            cout << j + 1;\n        }\n        cout << endl;\n    }\n\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+      {
+        "id": 9,
+        "title": "Hollow Inverted Half Pyramid Pattern",
+        "description": "Prints a hollow inverted half pyramid pattern for a given size. The size is input by the user.\n\nExample:\nFor input `5`, the output will be:\n\n*****\n*  *\n* *\n**\n*\n",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num;\n    cin >> num;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < num - i; j++)\n        {\n            if (i == 0 || i == num - 1)\n            {\n                cout << \"*\";\n            }\n            else\n            {\n                if (j == 0 || j == num - i - 1)\n                {\n                    cout << \"*\";\n                }\n                else\n                {\n                    cout << \" \";\n                }\n            }\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+      {
+        "id": 10,
+        "title": "Full Pyramid Pattern",
+        "description": "Prints a full pyramid pattern of stars for a given size. The size is input by the user.\n\nExample:\nFor input `7`, the output will be:\n\n      * \n     * * \n    * * * \n   * * * * \n  * * * * * \n * * * * * * \n* * * * * * * \n",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num;\n    cin >> num;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < num - i - 1; j++)\n        {\n            cout << \" \";\n        }\n        for (int j = 0; j < i + 1; j++)\n        {\n            cout << \"* \";\n        }\n        cout << endl;\n    }\n\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+      {
+        "id": 11,
+        "title": "Inverted Full Pyramid Pattern",
+        "description": "Prints an inverted full pyramid pattern of stars for a given size. The size is input by the user.\n\nExample:\nFor input `7`, the output will be:\n\n* * * * * * * \n * * * * * * \n  * * * * * \n   * * * * \n    * * * \n     * * \n      * \n",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num;\n    cin >> num;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < i; j++)\n        {\n            cout << \" \";\n        }\n        for (int j = 0; j < num - i; j++)\n        {\n            cout << \"* \";\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+      {
+        "id": 12,
+        "title": "Diamond Pyramid Pattern",
+        "description": "Prints a diamond-shaped pyramid pattern of stars for a given size. The size is input by the user.\n\nExample:\nFor input `5`, the output will be:\n\n    * \n   * * \n  * * * \n * * * * \n* * * * * \n* * * * * \n * * * * \n  * * * \n   * * \n    * \n",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num;\n    cin >> num;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < num - i - 1; j++)\n        {\n            cout << \" \";\n        }\n        for (int j = 0; j < i + 1; j++)\n        {\n            cout << \"* \";\n        }\n        cout << endl;\n    }\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < i; j++)\n        {\n            cout << \" \";\n        }\n        for (int j = 0; j < num - i; j++)\n        {\n            cout << \"* \";\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+      {
+        "id": 13,
+        "title": "Hollow Pyramid Pattern",
+        "description": "Prints a hollow pyramid pattern of stars for a given size. The size is input by the user.\n\nExample:\nFor input `5`, the output will be:\n\n     * \n    * * \n   *   * \n  *     * \n *       * \n",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num=5;\n    // cin >> num;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < num - i - 1; j++)\n        {\n            cout << \" \";\n        }\n        for (int j = 0; j < i + 1; j++)\n        {\n            if (j == 0 || j == i)\n            {\n                cout << \"* \";\n            }\n            else\n            {\n                cout << \"  \";\n            }\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+      {
+        "id": 14,
+        "title": "Inverted Hollow Pyramid Pattern",
+        "description": "Prints an inverted hollow pyramid pattern of stars for a given size. The size is input by the user.\n\nExample:\nFor input `5`, the output will be:\n\n*       * \n *     * \n  *   * \n   * * \n    * \n",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num = 5;\n    // cin >> num;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < i; j++)\n        {\n            cout << \" \";\n        }\n        for (int j = 0; j < num - i; j++)\n        {\n            if (j == 0 || j == num - i - 1)\n            {\n                cout << \"* \";\n            }\n            else\n            {\n                cout << \"  \";\n            }\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+      {
+        "id": 15,
+        "title": "Hollow Diamond Pattern",
+        "description": "Prints a hollow diamond pattern of stars for a given size. The size is input by the user.\n\nExample:\nFor input `5`, the output will be:\n\n    * \n   * * \n  *   * \n *     * \n*       * \n*       * \n *     * \n  *   * \n   * * \n    * \n",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num;\n    cin >> num;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < num - i - 1; j++)\n        {\n            cout << \" \";\n        }\n        for (int j = 0; j < i + 1; j++)\n        {\n            if (j == 0 || j == i)\n            {\n                cout << \"* \";\n            }\n            else\n            {\n                cout << \"  \";\n            }\n        }\n        cout << endl;\n    }\n\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < i; j++)\n        {\n            cout << \" \";\n        }\n        for (int j = 0; j < num - i; j++)\n        {\n            if (j == 0 || j == num - i - 1)\n            {\n                cout << \"* \";\n            }\n            else\n            {\n                cout << \"  \";\n            }\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+      {
+        "id": 16,
+        "title": "Flipped Solid Diamond Pattern",
+        "description": "Prints a flipped solid diamond pattern of stars for a given even size. The size is input by the user.\n\nExample:\nFor input `8`, the output will be:\n\n**** ****\n***   ***\n**     **\n*       *\n*       *\n**     **\n***   ***\n**** ****\n",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num = 8;\n    int n = num / 2;\n    // cin >> num;\n    for (int i = 0; i < n; i++)\n    {\n        for (int j = 0; j < n - i; j++)\n        {\n            cout << \"*\";\n        }\n        for (int j = 0; j < 2 * i + 1; j++)\n        {\n            cout << \" \";\n        }\n        for (int j = 0; j < n - i; j++)\n        {\n            cout << \"*\";\n        }\n\n        cout << endl;\n    }\n\n    for (int i = 0; i < n; i++)\n    {\n        for (int j = 0; j < i + 1; j++)\n        {\n            cout << \"*\";\n        }\n        for (int j = 0; j < (2 * n) - (2 * i + 1); j++)\n        {\n            cout << \" \";\n        }\n        for (int j = 0; j < i + 1; j++)\n        {\n            cout << \"*\";\n        }\n\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+      {
+        "id": 17,
+        "title": "Pyramidal Sequence Pattern",
+        "description": "Prints a pyramidal sequence pattern where numbers are followed by asterisks in a specific sequence. The number increases in each row, and asterisks are placed between the numbers.\n\nExample:\nFor input `5`, the output will be:\n\n1\n2*2\n3*3*3\n4*4*4*4\n5*5*5*5*5\n",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num;\n    cin >> num;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < 2 * i + 1; j++)\n        {\n            if (j % 2 == 1)\n            {\n                cout << \"*\";\n            }\n            else\n            {\n                cout << i + 1;\n            }\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": ""
+      },
+      {
+        "id": 18,
+        "title": "Full Pyramidal Sequence Pattern",
+        "description": "Prints a full pyramidal sequence pattern with increasing and then decreasing rows. Each row contains numbers followed by asterisks in a specific sequence.\n\nExample:\nFor input `5`, the output will be:\n\n1\n2*2\n3*3*3\n4*4*4*4\n5*5*5*5*5\n4*4*4*4\n3*3*3\n2*2\n1\n",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num;\n    cin >> num;\n\n    for (int i = 1; i <= num; ++i)\n    {\n        for (int j = 1; j <= i; ++j)\n        {\n            if (j > 1)\n            {\n                cout << \"*\";\n            }\n            cout << i;\n        }\n        cout << endl;\n    }\n\n    for (int i = num - 1; i >= 1; --i)\n    {\n        for (int j = 1; j <= i; ++j)\n        {\n            if (j > 1)\n            {\n                cout << \"*\";\n            }\n            cout << i;\n        }\n        cout << endl;\n    }\n\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": "This pattern first prints an increasing number sequence followed by asterisks, then decreases back."
+      },
+      {
+        "id": 19,
+        "title": "Character Sequence Pattern",
+        "description": "Prints a sequence of characters forming a pattern. Each row starts with 'A' and continues incrementing, then mirrors back down to 'A'.\n\nExample:\nFor input `5`, the output will be:\n\nA\nABA\nABCBA\nABCDCBA\nABCDEDCBA\n",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num = 5;\n    // cin >> num;\n    for (int row = 0; row < num; row++)\n    {\n        char ch;\n        for (int col = 0; col < row + 1; col++)\n        {\n            ch = col + 1 + 'A' - 1;\n            cout << ch;\n        }\n        for (char alphabet = ch; alphabet > 'A';)\n        {\n            alphabet = alphabet - 1;\n            cout << alphabet;\n        }\n        cout << endl;\n    }\n\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": "This pattern creates a character sequence that first increments and then decrements symmetrically for each row."
+      },
+      {
+        "id": 20,
+        "title": "Numeric Hollow Half Pyramid",
+        "description": "Prints a numeric hollow half pyramid where the first and last elements of each row are numbers, and the spaces in between are hollow. The last row is fully filled.\n\nExample:\nFor input `5`, the output will be:\n\n1\n12\n1 3\n1  4\n12345\n",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num = 5;\n    // cin >> num;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j <= i; j++)\n        {\n            if (j == 0 || j == i || i == num - 1)\n            {\n                cout << j + 1;\n            }\n            else\n            {\n                cout << \" \";\n            }\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": "This pattern creates a hollow numeric pyramid where only the edges of each row are filled with numbers, and spaces appear in the middle for all rows except the last."
+      },
+      {
+        "id": 21,
+        "title": "Numeric Hollow Inverted Half Pyramid",
+        "description": "Prints a numeric hollow inverted half pyramid where the first and last elements of each row are numbers, and the spaces in between are hollow. The first row is fully filled, and subsequent rows have hollow spaces between the first and last number.\n\nExample:\nFor input `5`, the output will be:\n\n12345\n2  5\n3 5\n45\n5\n",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num = 5;\n    // cin >> num;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = i + 1; j <= num; j++)\n        {\n            if (j == i + 1 || j == num || i == 0)\n            {\n                cout << j;\n            }\n            else\n            {\n                cout << \" \";\n            }\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": "This pattern creates a hollow inverted numeric pyramid, where only the edges of each row are filled with numbers, and spaces appear between the edges for all rows except the first."
+      },
+      {
+        "id": 22,
+        "title": "Numeric Palindrome Equilateral Pyramid",
+        "description": "Prints a numeric palindrome equilateral pyramid pattern where each row contains numbers that form a palindrome, and the numbers increase from 1 up to the row number and then decrease back to 1.\n\nExample:\nFor input `5`, the output will be:\n\n    1\n   121\n  12321\n 1234321\n123454321",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num;\n    cin >> num;\n    int k = num;\n    for (int i = 0; i < num; i++)\n    {\n        int c = 1;\n        for (int j = 0; j < k; j++)\n        {\n            if (j < num - i - 1)\n            {\n                cout << \" \";\n            }\n            else if (j <= num - 1)\n            {\n                cout << c;\n                c++;\n            }\n            else if (j == num)\n            {\n                c = c - 2;\n                cout << c;\n                c--;\n            }\n            else\n            {\n                cout << c;\n                c--;\n            }\n        }\n        k++;\n        cout << endl;\n    }\n\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": "This pattern creates a numeric palindrome pyramid, where each row consists of numbers that increase and then decrease symmetrically, forming a palindrome structure. The number of characters in each row increases as you move down the pyramid."
+      },
+      {
+        "id": 23,
+        "title": "Solid Half Diamond",
+        "description": "Prints a solid half diamond pattern where the top half contains increasing stars and the bottom half contains decreasing stars.\n\nExample:\nFor input `5`, the output will be:\n\n*\n**\n***\n****\n*****\n****\n***\n**\n*",
+        "difficulty": "Easy",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num = 5;\n    for (int i = 0; i < 2 * num - 1; i++)\n    {\n        int cond = 0;\n        if (i < num)\n        {\n            cond = i;\n        }\n        else\n        {\n            cond = num - (i % num) - 2;\n        }\n        for (int j = 0; j <= cond; j++)\n        {\n            cout << \"*\";\n        }\n        cout << endl;\n    }\n\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": "This pattern consists of two parts: an upper half with increasing stars and a lower half with decreasing stars. The total number of rows is `2 * num - 1`."
+      },
+      {
+        "id": 24,
+        "title": "Floyd’s Triangle Pattern",
+        "description": "Prints Floyd's triangle, where each row contains consecutive integers starting from 1.\n\nExample:\nFor input `5`, the output will be:\n\n1\n2 3\n4 5 6\n7 8 9 10",
+        "difficulty": "Easy",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num = 5;\n    int c=1;\n    for (int i = 0; i < num; i++)\n    {\n        for (int j = 0; j < i; j++)\n        {\n            cout<<c<<\" \";\n            c++;\n        }\n        cout<<endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": "Floyd's triangle is formed by filling consecutive integers row by row. The number of elements in each row increases as we move to the next row."
+      },
+      {
+        "id": 25,
+        "title": "Pascal’s Triangle Pattern",
+        "description": "Prints Pascal's Triangle, where each number is the binomial coefficient. Each row of Pascal’s Triangle represents the coefficients of the binomial expansion.\n\nExample:\nFor input `5`, the output will be:\n\n1\n1 1\n1 2 1\n1 3 3 1\n1 4 6 4 1",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int num = 5;\n    for (int i = 0; i < num; i++)\n    {\n        int c = 1;\n        for (int j = 0; j <= i; j++)\n        {\n            cout << c << \" \";\n            c = c * (i - j) / (j + 1);\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": "Each row of Pascal’s Triangle corresponds to the coefficients in the binomial expansion, and the numbers are calculated using the formula C(n, k) = n! / (k!(n - k)!)"
+      },
+      {
+        "id": 26,
+        "title": "Butterfly Pattern",
+        "description": "Prints a butterfly pattern, where the left and right halves are symmetric. The pattern consists of stars ('*') and spaces arranged in a way that they create a butterfly shape when viewed together.\n\nExample:\nFor input `5`, the output will be:\n\n*        *\n**      **\n***    ***\n****  ****\n**********\n**********\n****  ****\n***    ***\n**      **\n*        *",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int n = 5;\n    for (int i = 0; i < 2 * n; i++)\n    {\n        int cond = i < n ? i : n + (n - i - 1);\n        int space_count = i < n ? 2 * (n - cond - 1) : i - cond - 1;\n        for (int j = 0; j < 2 * n; j++)\n        {\n            if (j <= cond)\n            {\n                cout << \"*\";\n            }\n            else if (space_count > 0)\n            {\n                cout << \" \";\n                space_count--;\n            }\n            else\n            {\n                cout << \"*\";\n            }\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": "This pattern is symmetrical, with stars placed at certain positions on each row and spaces filling the rest of the positions. The number of spaces decreases as we approach the center of the pattern."
+      },
+      {
+        "id": 27,
+        "title": "Fancy Pattern #1",
+        "description": "Prints a fancy pyramid-like pattern with numbers that ascend and then descend on each row, creating a symmetric pattern.\n\nExample:\nFor input `7`, the output will be:\n\n1\n121\n12321\n1234321\n12321\n121\n1",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int n = 7;\n    for (int i = 0; i < n; i++)\n    {\n        int cond = i < n / 2 ? 2 * i : 2 * (n - i - 1);\n        for (int j = 0; j <= cond; j++)\n        {\n            if (j <= cond / 2)\n            {\n                cout << j + 1;\n            }\n            else\n            {\n                cout << cond - j + 1;\n            }\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": "This pattern uses a combination of increasing and decreasing numbers for each row, with the number of elements in each row decreasing as you approach the center."
+      },
+      {
+        "id": 28,
+        "title": "Fancy Pattern #2",
+        "description": "Prints a pattern of increasing numbers separated by stars, and then a symmetric pattern with numbers descending.\n\nExample:\nFor input `4`, the output will be:\n\n1\n2*3\n4*5*6\n7*8*9*10\n7*8*9*10\n4*5*6\n2*3\n1",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint main()\n{\n    int n = 4;\n    int c = 1;\n    for (int i = 0; i < n; i++)\n    {\n        for (int j = 0; j <= i; j++)\n        {\n            cout << c;\n            c++;\n            if (j < i)\n            {\n                cout << \"*\";\n            }\n        }\n        cout << endl;\n    }\n    int start = c - n;\n    for (int i = 0; i < n; i++)\n    {\n        int k = start;\n        for (int j = 0; j <= n - i - 1; j++)\n        {\n            cout << k;\n            k++;\n            if (j < n - i - 1)\n            {\n                cout << \"*\";\n            }\n        }\n        start = start - (n - i - 1);\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": "This pattern uses a combination of numbers and stars, creating a mirrored effect as you go down and up."
+      },
+      {
+        "id": 29,
+        "title": "Fancy Pattern #3",
+        "description": "Prints a pattern with stars and numbers. Each row contains a number repeated multiple times, separated by stars, and the numbers gradually increase with each row.\n\nExample:\nFor input `9`, the output will be:\n\n********1*********\n*******2*2********\n******3*3*3*******\n*****4*4*4*4******\n****5*5*5*5*5*****\n***6*6*6*6*6*6****\n**7*7*7*7*7*7*7***\n*8*8*8*8*8*8*8*8**\n9*9*9*9*9*9*9*9*9*",
+        "difficulty": "Medium",
+        "category": "loop-pattern",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\n#include \"assert.h\"\nusing namespace std;\n\nint main()\n{\n    int n = 9;\n    assert(n <= 9);\n    for (int i = 0; i < n; i++)\n    {\n        int start_num_index = 8 - i;\n        int num = i + 1;\n        int count_num = num;\n        for (int j = 0; j <= 17; j++)\n        {\n            if (j == start_num_index && count_num > 0)\n            {\n                cout << num;\n                start_num_index += 2;\n                count_num--;\n            }\n            else\n            {\n                cout << \"*\";\n            }\n        }\n        cout << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": "This pattern uses a fixed width of 18 characters per row with alternating stars and numbers. The pattern is symmetrical and the number of repetitions increases with each row."
+      }
+    ]
+  }
+
+  
+]
