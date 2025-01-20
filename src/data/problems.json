@@ -426,7 +426,297 @@
         "notes": "This pattern uses a fixed width of 18 characters per row with alternating stars and numbers. The pattern is symmetrical and the number of repetitions increases with each row."
       }
     ]
+  },
+  {
+    "name": "Functions",
+    "icon": "📚",
+    "description": "Master Functions",
+    "problems": [
+      {
+        "id": 1,
+        "title": "Find Max of 3 Numbers",
+        "description": "Finds the maximum of three given numbers by using the `max` function. The numbers are input as arguments to a function `printMaximum` which outputs the highest value.",
+        "difficulty": "Easy",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nvoid printMaximum(int n1, int n2, int n3)\n{\n    int ans1 = max(n1, n2);\n    int finalAns = max(ans1, n3);\n    cout << \"final Ans is: \" << finalAns << endl;\n}\n\nint main()\n{\n    printMaximum(3, 30, 100);\n    return 0;\n}"
+        },
+        "timeComplexity": "O(1)",
+        "spaceComplexity": "O(1)",
+        "notes": "This function utilizes the built-in `max` function to compare numbers and find the maximum."
+      },
+      {
+        "id": 2,
+        "title": "Counting from 1 to N",
+        "description": "Prints the numbers from 1 to a given number `n`. The function `printCounting` takes `n` as an argument and prints each number from 1 to `n` on a new line.",
+        "difficulty": "Easy",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nvoid printCounting(int n)\n{\n    for (int i = 1; i <= n; i++)\n    {\n        cout << i << endl;\n    }\n}\n\nint main()\n{\n    printCounting(10);\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "notes": "The function uses a loop to print numbers from 1 to `n`."
+      },
+      {
+        "id": 3,
+        "title": "Check Prime or Not",
+        "description": "Checks whether a given number `n` is prime or not. The function `checkPrime` loops through numbers from 2 to `n-1` and checks if `n` is divisible by any number. If so, it returns false; otherwise, it returns true.",
+        "difficulty": "Medium",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nbool checkPrime(int n)\n{\n    for (int i = 2; i < n; i++)\n    {\n        if (n % i == 0)\n        {\n            return false;\n        }\n    }\n    return true;\n}\n\nint main()\n{\n    bool prime = checkPrime(10);\n    if (prime)\n    {\n        cout << \"its a prime number\" << endl;\n    }\n    else\n    {\n        cout << \"its not a prime number\" << endl;\n    }\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "notes": "This function checks primality by testing divisibility with all integers less than `n`."
+      },
+      {
+        "id": 4,
+        "title": "Check Even or Odd",
+        "description": "Checks whether a given number `num` is even or odd. The function `checkEvenOdd` uses the modulus operator to determine if the number is divisible by 2. If it is, the number is even; otherwise, it is odd.",
+        "difficulty": "Easy",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nvoid checkEvenOdd(int num)\n{\n    if (num % 2 == 0)\n    {\n        cout << \"Even Number\" << endl;\n    }\n    else\n    {\n        cout << \"Odd Number\" << endl;\n    }\n}\n\nint main()\n{\n    checkEvenOdd(110);\n    return 0;\n}"
+        },
+        "timeComplexity": "O(1)",
+        "spaceComplexity": "O(1)",
+        "notes": "This function determines whether the number is even or odd by using the modulus operator."
+      },
+      {
+        "id": 5,
+        "title": "Check Even or Odd using Bitwise Operator",
+        "description": "Checks whether a given number `num` is even or odd using the bitwise AND operator. If the least significant bit of the number is 0, the number is even; otherwise, it is odd.",
+        "difficulty": "Medium",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nvoid checkEvenOdd(int num)\n{\n    if ((num & 1) == 0)\n    {\n        cout << \"Even Number\" << endl;\n    }\n    else\n    {\n        cout << \"Odd Number\" << endl;\n    }\n}\n\nint main()\n{\n    checkEvenOdd(110);\n    return 0;\n}"
+        },
+        "timeComplexity": "O(1)",
+        "spaceComplexity": "O(1)",
+        "notes": "This function uses a bitwise AND operation to check if the least significant bit of the number is 0 (even) or 1 (odd)."
+      },
+      {
+        "id": 6,
+        "title": "Sum of all numbers up to 1 to N",
+        "description": "Calculates the sum of all numbers from 1 to a given number `n`. The function `findSumUptoN` iterates through all integers from 1 to `n`, adding them together to find the total sum.",
+        "difficulty": "Easy",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nvoid findSumUptoN(int n)\n{\n    int sum = 0;\n\n    for (int i = 1; i <= n; i++)\n    {\n        sum = sum + i;\n    }\n\n    cout << \"Final Sum: \" << sum << endl;\n}\n\nint main()\n{\n    findSumUptoN(110);\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "notes": "The function calculates the sum of all integers from 1 to `n` by iterating through each number and adding it to the running total."
+      },
+      {
+        "id": 7,
+        "title": "Sum of all even numbers up to 1 to N",
+        "description": "Calculates the sum of all even numbers from 1 to a given number `n`. The function `findSumEvenUptoN` iterates through all numbers from 1 to `n`, checks if the number is even, and adds it to the total sum.",
+        "difficulty": "Easy",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nvoid findSumEvenUptoN(int n)\n{\n    int sum = 0;\n    for (int i = 1; i <= n; i++)\n    {\n        if (i % 2 == 0)\n        {\n            sum = sum + i;\n        }\n    }\n    cout << \"Final Sum: \" << sum << endl;\n}\n\nint main()\n{\n    findSumEvenUptoN(10);\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "notes": "The function calculates the sum of all even numbers from 1 to `n` by checking if each number is divisible by 2."
+      },
+      {
+        "id": 8,
+        "title": "Function to find area of a circle",
+        "description": "Calculates the area of a circle for a given radius. The function `circleArea` takes the radius as an argument and returns the calculated area using the formula `π * radius^2`.",
+        "difficulty": "Easy",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nfloat circleArea(float radius)\n{\n    float area = 3.14 * radius * radius;\n    return area;\n}\n\nint main()\n{\n    float radius;\n    cin >> radius;\n    float area = circleArea(radius);\n    cout << \"Area: \" << area << endl;\n    return 0;\n}"
+        },
+        "timeComplexity": "O(1)",
+        "spaceComplexity": "O(1)",
+        "notes": "The function calculates the area of a circle based on the formula `π * radius^2`, with an approximation of `π` as 3.14."
+      },
+      {
+        "id": 9,
+        "title": "Function to find Factorial of a Number",
+        "description": "Calculates the factorial of a given number `n`. The function `factorial` uses a loop to multiply all integers from 1 to `n` to calculate the factorial.",
+        "difficulty": "Medium",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nlong long int factorial(long long int n)\n{\n    long long int fact = 1;\n    for (int i = 1; i <= n; i++)\n    {\n        fact = fact * i;\n    }\n    return fact;\n}\n\nint main()\n{\n    long long int n;\n    cin >> n;\n    long long int ans = factorial(n);\n    cout << \"Factorial of \" << n << \" is: \" << ans << endl;\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "notes": "This function calculates the factorial of a number using an iterative approach."
+      },
+      {
+        "id": 10,
+        "title": "Print all prime numbers from 1 to N",
+        "description": "Prints all prime numbers from 1 to a given number `n`. The function `checkPrime` checks if a number is prime, and in the `main` function, it iterates through all numbers from 2 to `n`, printing the primes.",
+        "difficulty": "Medium",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nbool checkPrime(int n)\n{\n    for (int i = 2; i < n; i++)\n    {\n        if (n % i == 0)\n        {\n            return false;\n        }\n    }\n    return true;\n}\n\nint main()\n{\n    int n;\n    cin >> n;\n    for (int i = 2; i < n; i++)\n    {\n        bool isPrime = checkPrime(i);\n        if (isPrime)\n        {\n            cout << i << \" \";\n        }\n    }\n\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)",
+        "notes": "This function prints all prime numbers from 1 to `n` by checking each number from 2 to `n` to see if it is prime."
+      },
+      {
+        "id": 11,
+        "title": "Leetcode 7 → Reverse Integer",
+        "description": "Given a 32-bit signed integer `x`, the task is to reverse the digits of the integer. If reversing the integer causes it to overflow, return 0. The function handles both positive and negative integers and ensures no overflow occurs during the reversal process.",
+        "difficulty": "Medium",
+        "category": "functions",
+        "source": "Leetcode",
+        "solved": true,
+        "solutions": {
+          "cpp": "class Solution\n{\npublic:\n    int reverse(int x)\n    {\n        int ans = 0;\n        int rem = 0;\n\n        bool isNegative = false;\n\n        if (x <= INT_MIN)\n        {\n            return 0;\n        }\n\n        if (x < 0)\n        {\n            isNegative = true;\n            x = -x;\n        }\n\n        while (x > 0)\n        {\n            if (ans > INT_MAX / 10)\n            {\n                return 0;\n            }\n\n            int digit = x % 10;\n            ans = ans * 10 + digit;\n            x = x / 10;\n        }\n        return isNegative ? -ans : ans;\n    }\n};"
+        },
+        "timeComplexity": "O(log x)",
+        "spaceComplexity": "O(1)",
+        "notes": "The solution handles overflow scenarios and checks if the reversed integer will fit within the 32-bit signed integer range."
+      },
+      {
+        "id": 12,
+        "title": "Set Kth Bit",
+        "description": "Given a number `N` and a position `K`, the task is to set the K-th bit of the number `N` to 1. The function uses bitwise operations to achieve this.",
+        "difficulty": "Easy",
+        "category": "functions",
+        "source": "GeeksforGeeks",
+        "solved": true,
+        "solutions": {
+          "cpp": "class Solution\n{\npublic:\n    int setKthBit(int N, int K)\n    {\n        int mask = 1 << K;\n        int ans = N | mask;\n        return ans;\n    }\n};"
+        },
+        "timeComplexity": "O(1)",
+        "spaceComplexity": "O(1)",
+        "notes": "The solution uses a left shift operation to create a mask with the K-th bit set to 1 and then performs a bitwise OR with `N` to set the K-th bit."
+      },
+      {
+        "id": 13,
+        "title": "Leetcode 2469 → Convert the temperature",
+        "description": "Given a temperature in Celsius, the task is to convert it into both Kelvin and Fahrenheit. The function returns a vector containing the converted temperature values in the order [Kelvin, Fahrenheit].",
+        "difficulty": "Easy",
+        "category": "functions",
+        "source": "Leetcode",
+        "solved": true,
+        "solutions": {
+          "cpp": "class Solution\n{\npublic:\n    vector<double> convertTemperature(double celsius)\n    {\n        double Kelvin = celsius + 273.15;\n        double Fahrenheit = celsius * 1.80 + 32.00;\n\n        vector<double> ans;\n        ans.push_back(Kelvin);\n        ans.push_back(Fahrenheit);\n        return ans;\n    }\n};"
+        },
+        "timeComplexity": "O(1)",
+        "spaceComplexity": "O(1)",
+        "notes": "The solution directly applies the formulas for converting Celsius to Kelvin and Fahrenheit. The result is returned as a vector."
+      },
+      {
+        "id": 14,
+        "title": "Count all set bits of a number",
+        "description": "Given a number `n`, the task is to count the number of set bits (1s) in the binary representation of `n`. The function iterates through the bits of the number to count how many bits are set to 1.",
+        "difficulty": "Easy",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint countSetBit(int n)\n{\n    int count = 0;\n    while (n > 0)\n    {\n        int bit = n % 2;\n        if (bit == 1)\n        {\n            count++;\n        }\n        n = n / 2;\n    }\n    return count;\n}\n\nint main()\n{\n    int n;\n    cin >> n;\n    int setBitCount = countSetBit(n);\n    return 0;\n}"
+        },
+        "timeComplexity": "O(log n)",
+        "spaceComplexity": "O(1)",
+        "notes": "The function counts the number of set bits in the binary representation of the number by repeatedly dividing the number by 2 and checking the remainder."
+      },
+      {
+        "id": 15,
+        "title": "Count all set bits of a number using Bitwise Operator",
+        "description": "Given a number `n`, the task is to count the number of set bits (1s) in the binary representation of `n` using bitwise operators. The function uses the bitwise AND operator to check each bit and the bitwise right shift operator to move through the bits.",
+        "difficulty": "Easy",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint countSetBit(int n)\n{\n    int count = 0;\n    while (n)\n    {\n        int bit = (n & 1);\n        if (bit)\n        {\n            count++;\n        }\n        n = n >> 1;\n    }\n    return count;\n}\n\nint main()\n{\n    int n;\n    cin >> n;\n    int setBitCount = countSetBit(n);\n    return 0;\n}"
+        },
+        "timeComplexity": "O(log n)",
+        "spaceComplexity": "O(1)",
+        "notes": "The function uses the bitwise AND operator to check if the current bit is set and the bitwise right shift operator to shift to the next bit."
+      },
+      {
+        "id": 16,
+        "title": "Create a number using digits",
+        "description": "Given a number `numberOfDigits`, the task is to create a number by taking individual digits as input from the user. The function combines the digits into a single number and returns it.",
+        "difficulty": "Easy",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint createNumberUsingDigits(int numberOfDigits)\n{\n    int num = 0;\n    for (int i = 0; i < numberOfDigits; i++)\n    {\n        cout << \"Enter Digits: \" << endl;\n        int digits;\n        cin >> digits;\n        num = num * 10 + digits;\n    }\n    return num;\n}\n\nint main()\n{\n    int numberOfDigits;\n    cin >> numberOfDigits;\n    int num = createNumberUsingDigits(numberOfDigits);\n    cout << num << endl;\n\n    return 0;\n}"
+        },
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)",
+        "notes": "The function iterates over the number of digits and appends each digit to the current number by multiplying the previous number by 10 and adding the new digit."
+      },
+      {
+        "id": 17,
+        "title": "Print all digits of an integer",
+        "description": "Given an integer `n`, the task is to print each digit of the number starting from the least significant digit (ones place) to the most significant digit.",
+        "difficulty": "Easy",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint printAllDigits(int n)\n{\n    while (n)\n    {\n        int onesPlaceDigit = n % 10;\n        cout << \"Digits: \" << onesPlaceDigit << endl;\n        n /= 10;\n    }\n}\n\nint main()\n{\n    int n;\n    cout << \"Enter Number to see its Digits\" << endl;\n    cin >> n;\n    printAllDigits(n);\n\n    return 0;\n}"
+        },
+        "timeComplexity": "O(d)",
+        "spaceComplexity": "O(1)",
+        "notes": "The function iterates over the digits of the number by continuously dividing the number by 10, and prints each digit starting from the least significant."
+      },
+      {
+        "id": 18,
+        "title": "Convert KM into miles",
+        "description": "Given a distance in kilometers, the task is to convert the value into miles using the conversion factor (1 km = 0.621371 miles).",
+        "difficulty": "Easy",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nint KMtoMiles(int km)\n{\n    float _1kmMile = 0.621371;\n    float miles = km * _1kmMile;\n    return miles;\n}\n\nint main()\n{\n    float km;\n    cout << \"Tell me KM: \" << endl;\n    cin >> km;\n    float miles = KMtoMiles(km);\n    cout << \"Miles=\" << miles << endl;\n    return 0;\n}"
+        },
+        "timeComplexity": "O(1)",
+        "spaceComplexity": "O(1)",
+        "notes": "The function converts kilometers into miles using the standard conversion factor of 0.621371."
+      },
+      {
+        "id": 19,
+        "title": "Print binary representation of a decimal number",
+        "description": "Given a decimal number, the task is to print its binary representation. The binary representation of a number is the sequence of binary digits (0 and 1) that represents the value in base-2.",
+        "difficulty": "Medium",
+        "category": "functions",
+        "source": "Practice",
+        "solved": true,
+        "solutions": {
+          "cpp": "#include <iostream>\nusing namespace std;\n\nvoid BinaryRepresent(int value) {\n    string ans = \"\";\n    while (value > 0) {\n        int digit = value % 2;\n        ans = to_string(digit) + ans;\n        value /= 2;\n    }\n    cout << ans << endl;\n}\n\nint main() {\n    BinaryRepresent(10);\n    return 0;\n}"
+        },
+        "timeComplexity": "O(log n)",
+        "spaceComplexity": "O(log n)",
+        "notes": "The function iteratively divides the number by 2 to extract binary digits and constructs the binary string from least significant to most significant bit."
+      }
+    ]
   }
-
-  
 ]
